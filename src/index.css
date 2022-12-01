@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply font-nunito;
+}
+
+.font-nunito{
+  font-family: "Nunito", sans-serif !important;
+}
+
+.font-lexend{
+  font-family: "Nunito", sans-serif !important;
+}
+
+/* scroll */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-dark;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400/10 rounded-full h-[60px];
+}
+
+div,
+input,
+textarea,
+button,
+select,
+a {
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+} 
+.y-form {
+  @apply flex flex-col gap-2 mb-4;
+}
+
+label {
+  @apply text-gray-300 font-semibold;
+}
+
+/* remove input type number arrow */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+input {
+  @apply text-gray-300 w-full py-2 px-3 bg-dark outline-none border-gray-500 border rounded-md focus:border-primary/40 focus:pl-4 transition-all ease-linear duration-200;
+}
+
+.y-btn {
+  @apply px-4 py-2 rounded-[.38rem] tracking-wide font-semibold transition-all ease-in-out duration-100;
+}
+
+.y-btn-primary {
+  @apply bg-primary text-dark hover:shadow-lg hover:shadow-primary/10 transition-all ease-linear duration-200;
+}
+
+.tabs {
+  @apply flex gap-3;
+}
+
+.tab {
+  @apply px-4 py-2 rounded cursor-pointer border border-primary transition-all ease-linear;
+}
+
+.tab.active {
+  @apply text-dark bg-primary shadow-lg shadow-primary/10;
+}
+
+.tab-item {
+  @apply text-gray-300 transition-all ease-linear duration-200 overflow-y-auto;
+}
+
+.tab-item.active {
+  @apply visible;
+}
