@@ -78,7 +78,7 @@ input {
 }
 
 .tab {
-  @apply px-4 py-2 rounded cursor-pointer border border-primary transition-all ease-linear;
+  @apply px-4 py-[6px] rounded cursor-pointer border border-primary transition-all ease-linear;
 }
 
 .tab.active {

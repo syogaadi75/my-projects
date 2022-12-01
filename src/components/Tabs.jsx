@@ -5,8 +5,8 @@ function Tabs() {
     const [activeTab, setActiveTab] = useState(1)
 
     return (
-        <div className='mb-4 m-4 px-4 py-6 shadow-xl shadow-black/20 border-2 border-black/10 rounded-lg'>
-            <h4 className='mb-3 text-lg font-semibold'>List Project</h4>
+        <div className='mb-4 px-4 py-6 shadow-xl shadow-black/20 border-2 border-black/10 rounded-lg'>
+            <h4 className='mb-3 font-semibold'>List Project</h4>
             <div className='tabs mb-5'>
                 <div className={`tab ${activeTab === 1 && 'active'}`} onClick={() => setActiveTab(1)}>
                     In Process
@@ -17,40 +17,42 @@ function Tabs() {
             </div>
             {activeTab == 1 ? (
                 <div className='tab-item'>
-                    <div className='flex justify-between items-center mb-2'>
-                        <div className='text-sm flex items-center gap-2 w-full'>
-                            <span>
-                                1.
-                            </span>
-                            <span>
+                    <div className='flex justify-between gap-3 items-center mb-2'>
+                        <div className='p-4 bg-primary/10'>
+                            1
+                        </div>
+                        <div className='flex w-full flex-col'>
+                            <div className='font-bold text-sm'>
                                 Aplikasi E-Library
-                            </span>
-                            <ChevronRightIcon className='w-4' />
-                            <span className='font-bold'>
-                                Rp.1.000.000
-                            </span>
+                            </div>
+                            <div className='text-xs'>
+                                <span className='mr-2 font-semibold text-primary'>
+                                    Rp. 1.000.000 ,
+                                </span>
+                                17 Apr 2022
+                            </div>
                         </div>
-                        <div className='text-xs w-1/3 text-right'>17 Apr 2022 - .....</div>
                     </div>
-                    <div className='flex justify-between items-center mb-2'>
-                        <div className='text-sm flex items-center gap-2 w-full'>
-                            <span>
-                                2.
-                            </span>
-                            <span>
-                                Aplikasi Logistik
-                            </span>
-                            <ChevronRightIcon className='w-4' />
-                            <span className='font-bold'>
-                                Rp.5.000.000
-                            </span>
+                    <div className='flex justify-between gap-3 items-center mb-2'>
+                        <div className='p-4 bg-primary/10'>
+                            2
                         </div>
-                        <div className='text-xs w-1/3 text-right'>8 Aug 2021 - .....</div>
+                        <div className='flex w-full flex-col'>
+                            <div className='font-bold text-sm'>
+                                Aplikasi Logistik
+                            </div>
+                            <div className='text-xs'>
+                                <span className='mr-2 font-semibold text-primary'>
+                                    Rp. 5.000.000 ,
+                                </span>
+                                8 Aug 2022
+                            </div>
+                        </div>
                     </div>
                 </div>
             ) : (
                 <div className='tab-item'>
-                    Second First Tab
+                    Second Tab
                 </div>
             )}
         </div>

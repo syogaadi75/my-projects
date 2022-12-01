@@ -3,7 +3,7 @@ import { CheckCircleIcon } from '@heroicons/react/24/outline'
 
 function Form() {
     return (
-        <div className='mb-4 m-4 px-4 py-6 shadow-xl shadow-black/20 border-2 border-black/10 rounded-lg'>
+        <div className='mb-4 px-4 py-6 shadow-xl shadow-black/20 border-2 border-black/10 rounded-lg'>
             <div className='y-form'>
                 <label htmlFor='project_name'>Project Name</label>
                 <input type="text" name="project_name" id="project_name" placeholder='Enter your project name' />
